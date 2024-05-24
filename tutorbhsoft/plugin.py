@@ -38,6 +38,5 @@ def _add_bhsoft_mfe(mfes):
     mfes["mymfe"] = {
         "repository": "https://github.com/BacHaSoftware/frontend-app-bhsoft-landing.git",
         "port": 8080,
-        "version": "releases/tag/open-release/quince.2",
     }
     return mfes

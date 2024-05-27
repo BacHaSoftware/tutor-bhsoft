@@ -7,7 +7,7 @@ import typing as t
 
 # import importlib_resources
 # from tutor import fmt
-from tutor import hooks as tutor_hooks
+from tutor import hooks
 from tutor.__about__ import __version_suffix__
 # from tutor.hooks import priorities
 # from tutor.types import Config, get_typed
@@ -34,9 +34,25 @@ config: t.Dict[str, t.Dict[str, t.Any]] = {
 
 
 @MFE_APPS.add()
-def _add_bhsoft_mfe(mfes):
-    mfes["mymfe"] = {
-        "repository": "https://github.com/BacHaSoftware/frontend-app-bhsoft-landing.git",
+def _add_bhsoft_landing(mfes):
+    mfes["landing"] = {
+        "repository": "https://github.com/BacHaSoftware/frontend-app-landing.git",
         "port": 8080,
+        "version": "develop"
     }
     return mfes
+
+# hooks.Filters.ENV_PATCHES.add_item(
+#     (
+#         "openedx-cms-common-settings",
+#         'CORS_ORIGIN_WHITELIST.append("http://localhost:8081")'
+#     )
+# )
+
+
+# hooks.Filters.ENV_PATCHES.add_item(
+#     (
+#         "openedx-lms-common-settings",
+#         'CORS_ORIGIN_WHITELIST.append("http://localhost:8081")'
+#     )
+# )

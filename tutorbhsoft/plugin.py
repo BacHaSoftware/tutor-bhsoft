@@ -35,13 +35,8 @@ config: t.Dict[str, t.Dict[str, t.Any]] = {
 
 @MFE_APPS.add()
 def _add_bhsoft_landing(mfes):
-    mfes["landing"] = {
-        "repository": "https://github.com/BacHaSoftware/frontend-app-landing.git",
-        "port": 8080,
-        "version": "develop"
-    }
     mfes["home"] = {
-        "repository": "https://github.com/congbhbhsoft/frontend-app-home.git",
+        "repository": "https://github.com/BacHaSoftware/frontend-app-home.git",
         "port": 3001,
         "version": "main",
         "name": "home"

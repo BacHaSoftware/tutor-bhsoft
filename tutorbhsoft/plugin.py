@@ -34,7 +34,7 @@ config: t.Dict[str, t.Dict[str, t.Any]] = {
 
 
 @MFE_APPS.add()
-def _add_bhsoft_landing(mfes):
+def mfe_forks(mfes):
     mfes["home"] = {
         "repository": "https://github.com/BacHaSoftware/frontend-app-home.git",
         "port": 3001,
@@ -43,3 +43,14 @@ def _add_bhsoft_landing(mfes):
     }
     return mfes
 
+
+hooks.Filters.ENV_PATCHES.add_items(
+    [
+        (
+            "mfe-dockerfile-post-npm-install",
+            """
+    RUN npm install '@edx/frontend-component-footer@git+https://github.com/BacHaSoftware/frontend-component-footer.git#main' --registry=$NPM_REGISTRY
+    """
+        ),
+    ]
+)

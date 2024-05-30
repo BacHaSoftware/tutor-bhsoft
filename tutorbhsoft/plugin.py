@@ -40,19 +40,11 @@ def _add_bhsoft_landing(mfes):
         "port": 8080,
         "version": "develop"
     }
+    mfes["home"] = {
+        "repository": "https://github.com/congbhbhsoft/frontend-app-home.git",
+        "port": 3001,
+        "version": "main",
+        "name": "home"
+    }
     return mfes
 
-# hooks.Filters.ENV_PATCHES.add_item(
-#     (
-#         "openedx-cms-common-settings",
-#         'CORS_ORIGIN_WHITELIST.append("http://localhost:8081")'
-#     )
-# )
-
-
-# hooks.Filters.ENV_PATCHES.add_item(
-#     (
-#         "openedx-lms-common-settings",
-#         'CORS_ORIGIN_WHITELIST.append("http://localhost:8081")'
-#     )
-# )

@@ -49,17 +49,17 @@ hooks.Filters.ENV_PATCHES.add_items(
         (
             "mfe-dockerfile-post-npm-install-home",
             """
-    RUN npm install '@edx/frontend-component-footer@git+https://github.com/BacHaSoftware/frontend-component-footer.git#main' --registry=$NPM_REGISTRY
-    """
+RUN npm install '@edx/frontend-component-footer@git+https://github.com/BacHaSoftware/frontend-component-footer.git#main' --registry=$NPM_REGISTRY
+"""
         ),
         (
             "mfe-lms-production-settings",
             """
-    MFE_CONFIG["LOGO_URL"] = "https://bachasoftware.com/web/image/53634-74e63e67/Logo.png"
-    MFE_CONFIG["LOGO_TRADEMARK_URL"] = "https://bachasoftware.com/web/image/53634-74e63e67/Logo.png"
-    MFE_CONFIG["LOGO_WHITE_URL"] = "https://bachasoftware.com/web/image/53634-74e63e67/Logo.png"
-    MFE_CONFIG["FAVICON_URL"] = "https://bachasoftware.com/web/image/53634-74e63e67/favico.icon"
-    """
+MFE_CONFIG["LOGO_URL"] = "https://bachasoftware.com/web/image/53634-74e63e67/Logo.png"
+MFE_CONFIG["LOGO_TRADEMARK_URL"] = "https://bachasoftware.com/web/image/53634-74e63e67/Logo.png"
+MFE_CONFIG["LOGO_WHITE_URL"] = "https://bachasoftware.com/web/image/53634-74e63e67/Logo.png"
+MFE_CONFIG["FAVICON_URL"] = "https://bachasoftware.com/web/image/53634-74e63e67/favico.icon"
+"""
         )
     ]
 )

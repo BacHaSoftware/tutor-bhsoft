@@ -55,10 +55,10 @@ hooks.Filters.ENV_PATCHES.add_items(
         (
             "mfe-lms-production-settings",
             """
-    MFE_CONFIG["LOGO_URL"] = "https://bachasoftware.com/web/image/website/2/logo/Bac%20Ha%20Software%20Co.%2C%20Ltd.?unique=7bf7a33"
-    MFE_CONFIG["LOGO_TRADEMARK_URL"] = "https://bachasoftware.com/web/image/website/2/logo/Bac%20Ha%20Software%20Co.%2C%20Ltd.?unique=7bf7a33"
-    MFE_CONFIG["LOGO_WHITE_URL"] = "https://bachasoftware.com/web/image/website/2/logo/Bac%20Ha%20Software%20Co.%2C%20Ltd.?unique=7bf7a33"
-    MFE_CONFIG["FAVICON_URL"] = "https://bachasoftware.com/web/image/website/2/favicon?unique=33e1031"
+    MFE_CONFIG["LOGO_URL"] = "https://bachasoftware.com/web/image/53634-74e63e67/Logo.png"
+    MFE_CONFIG["LOGO_TRADEMARK_URL"] = "https://bachasoftware.com/web/image/53634-74e63e67/Logo.png"
+    MFE_CONFIG["LOGO_WHITE_URL"] = "https://bachasoftware.com/web/image/53634-74e63e67/Logo.png"
+    MFE_CONFIG["FAVICON_URL"] = "https://bachasoftware.com/web/image/53634-74e63e67/favico.icon"
     """
         )
     ]

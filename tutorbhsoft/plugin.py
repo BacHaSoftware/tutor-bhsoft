@@ -41,6 +41,12 @@ def mfe_forks(mfes):
         "version": "main",
         "name": "home"
     }
+    mfes["course-about"] = {
+        "repository": "https://github.com/BacHaSoftware/frontend-app-course-about.git",
+        "version": "main",
+        "port": 3002,
+        "name": "course-about",
+    }
     return mfes
 
 

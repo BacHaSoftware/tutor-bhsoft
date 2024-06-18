@@ -10,7 +10,7 @@ If it doesn't exit, create it::
     mkdir "$(tutor plugins printroot)"
 
 
-Continue::
+Install MFE python plugins::
 
     cd "$(workspace)"
     git clone https://github.com/BacHaSoftware/tutor-bhsoft.git
@@ -18,17 +18,32 @@ Continue::
     tutor plugins enable bhsoft
     tutor config save
 
+Install MFE yml plugins::
+
+    cd "$(workspace)"
+    cp home-mfe.yml $(tutor plugins printroot)
+    cp course-about-mfe.yml $(tutor plugins printroot)
+    tutor plugins enable landing-mfe
+    tutor plugins enable course-about-mfe
+
+Verify installed plugins::
+    tutor plugins list
+
+Update plugins::
+
+    tutor plugins update bhsoft
+    tutor plugins update landing-mfe
+    tutor plugins update lcourse-about-mfe
+
 Rebuild MFE image::
 
     tutor images build mfe
+    tutor images build mfe  --no-cache --no-registry-cache
 
+Remove docker buildx::
 
-Update
-------------
+    docker buildx rm singlecpu
 
-tutor plugins update bhsoft
+Create docker buildx::
 
-
-Docker
-Kill all docker instances::
-    killall Docker && open /Applications/Docker.app
+    docker buildx create --use --name=singlecpu --config=./buildkitd.toml

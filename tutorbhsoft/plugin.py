@@ -59,6 +59,13 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/BacHaSoft
 """
         ),
         (
+            "mfe-dockerfile-post-npm-install-course-about",
+            """
+RUN npm install '@edx/frontend-component-header@git+https://github.com/BacHaSoftware/frontend-component-header.git#main' --registry=$NPM_REGISTRY
+RUN npm install '@edx/frontend-component-footer@git+https://github.com/BacHaSoftware/frontend-component-footer.git#main' --registry=$NPM_REGISTRY
+"""
+        ),
+        (
             "mfe-lms-production-settings",
             """
 MFE_CONFIG["LOGO_URL"] = "https://bachasoftware.com/web/image/53634-74e63e67/Logo.png"

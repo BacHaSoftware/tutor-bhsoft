@@ -53,7 +53,13 @@ def mfe_forks(mfes):
 hooks.Filters.ENV_PATCHES.add_items(
     [
         (
-            "mfe-dockerfile-post-npm-install",
+            "mfe-dockerfile-post-npm-install-home",
+            """
+RUN npm install '@edx/frontend-component-footer@git+https://github.com/BacHaSoftware/frontend-component-footer.git#main' --registry=$NPM_REGISTRY
+"""
+        ),
+        (
+            "mfe-dockerfile-post-npm-install-course-about",
             """
 RUN npm install '@edx/frontend-component-header@git+https://github.com/BacHaSoftware/frontend-component-header.git#main' --registry=$NPM_REGISTRY
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/BacHaSoftware/frontend-component-footer.git#main' --registry=$NPM_REGISTRY
